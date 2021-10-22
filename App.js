@@ -6,6 +6,7 @@ import Home from "./Home";
 import { createStackNavigator } from "@react-navigation/stack";
 import Tickets from "./Tickets";
 import Contact from "./Contact";
+import TicketPurchase from "./TicketPurchase";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -35,6 +36,14 @@ export default function App() {
             options={{
               headerTitleAlign: "center",
               headerTitle: "Contact Us",
+            }}
+          />
+          <Stack.Screen
+            name="Purchase"
+            component={TicketPurchase}
+            options={{
+              headerTitleAlign: "center",
+              headerTitle: "Purchase Tickets",
             }}
           />
         </Stack.Navigator>
